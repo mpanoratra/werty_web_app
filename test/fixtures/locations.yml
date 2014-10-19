@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  number_rows: 1
+  number_cols: 1
+  queue_list: MyText
+  time_to_clear_queue: 1.5
+
+two:
+  name: MyString
+  number_rows: 1
+  number_cols: 1
+  queue_list: MyText
+  time_to_clear_queue: 1.5

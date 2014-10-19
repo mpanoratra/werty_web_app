@@ -1,0 +1,13 @@
+<%= form_for @location, :url => locations_path, :html => { :multipart => true } do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    Please upload an still shot of your line when it is completely empty:
+    <%= form.file_field :empty_still_image %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

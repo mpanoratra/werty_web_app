@@ -1,0 +1,25 @@
+<%= form_for @location do |form| %>
+  <div id="empty_image">
+    <%= image_tag @location.empty_still_image.url %>
+  </div>
+
+  <div class="hidden_num_fields">
+    <%= form.hidden_field :number_rows, value: 3 %>
+    <%= form.hidden_field :number_cols, value: 4 %>
+  </div>
+  <div>
+    <i class="addRow fa fa-plus-square-o fa-2x">Rows</i>
+    <i class="addCol fa fa-plus-square-o fa-2x"> Columns</i>
+  </div>
+  <div>
+    <i class="minusRow fa fa-minus-square-o fa-2x">Rows</i>
+    <i class="minusCol fa fa-minus-square-o fa-2x"> Columns</i>
+  </div>
+  <div>
+    <%= form.label :time_to_clear_queue %><br />
+    <%= form.text_field :time_to_clear_queue %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

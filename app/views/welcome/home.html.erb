@@ -1,0 +1,25 @@
+<% if !user_signed_in? %>
+  <!--put info about app here --> 
+  <div id="home">
+        <div id="title">
+		<div id="no_q">Because there's no &nbsp;<%= image_tag("q_key.png", :alt => "Q") %> ueue</div>
+		<div id="in">in</div>
+		<div id="werty_title"><%= image_tag("werty_keys.png", :alt => "WERTY") %></div>                     
+        </div>
+        <div id="create_btn" class="shownBack"><%= link_to('Create Account', new_user_registration_path)  %></div>
+  </div>
+  <div class="footer">
+        <div> Copyright 2014</div>
+  </div>
+<% else %>
+  <% if current_user.account_type == 'producer' %>
+    <!--put upload/monitor info here --> 
+    <div>Create Location</div>
+    <div>Monitor Location</div>
+  <% elsif current_user.account_type == 'consumer' %>
+    <!--put search for line here -->
+    <div>Search</div> 
+  <% else %>
+    <div> Don't recognize your account type! </div>
+  <% end %>
+<% end %>

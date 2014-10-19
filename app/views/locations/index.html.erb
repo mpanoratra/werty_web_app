@@ -1,0 +1,18 @@
+<div class="container"> 
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Avg Time to Clear</th>
+  </thead>
+  <tbody>
+    <% @locations.each_with_index do |location, i| %>
+      <tr>
+        <td><%= location.name %><%= i %></td>
+        <td><%= image_tag location.empty_still_image.url(:thumb) %></td>
+        <td><%= link_to 'Show', location %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<%= link_to 'New Location', new_location_path %>

@@ -1,0 +1,18 @@
+Location
+<div>
+  Name: <%= @location.name %>
+</div>
+
+<div>
+  Rows: <%= @location.number_rows%><br />
+  Cols: <%= @location.number_cols%>
+</div>
+
+<div>
+  <%= image_tag @location.empty_still_image.url %>
+</div>
+
+<div>
+  Average Time to clear the queue: <%= @location.time_to_clear_queue%>
+</div>
+<%= link_to 'Back', locations_path %>

@@ -1,0 +1,187 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= font-awesome
+ *= require_tree .
+ *= require_self
+ */
+
+/* Main header */
+.main_header{
+    padding: .5em 0 .5em 0;
+}
+#sign_in, #fake_sign_in_btn{
+    display: inline-block;
+    width: 75%;
+}
+#register{
+    display: inline-block;
+    width: 24%;
+}
+
+.slide {
+    position: relative;
+    left: -100px;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 0s;
+    animation: slide 0.5s forwards;
+    animation-delay: 0s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+/* Hide/Unhide background */
+.hideBack {
+     background-color: none;
+}
+.shownBack {
+     background-color: white;
+}
+
+
+/* Home Page CSS */
+#home{
+     background-image: url("line.jpg");
+     text-align:center;
+     height: 30em;
+}
+#title{
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+     margin-bottom:1em;
+     text-align:center;
+     width: 75%;
+     margin-left:auto;
+     margin-right:auto;
+     color: white;
+}
+#no_q{
+     font-size: 4em;
+}
+#in{
+     font-size: 4em;
+}
+#werty_title{
+     font-size: 5em;
+     margin-bottom: 1.2em;
+}
+#werty_title > img{
+     width: 363px;
+}
+
+/*Create account btn */
+#create_btn{
+     font-size: 2.5em;
+     width: 8em;
+     height: 1.5em;
+     margin-left: auto;
+     margin-right: auto;
+     border-radius: .5em;
+     border: 3px solid white;
+}
+
+.footer{
+     color: white;
+     height: 6em;
+     background-color: black;
+     text-align:center;
+     padding-top: 4em;
+}
+
+/* About US Page CSS */
+/* About US page application info*/
+#app_info{
+     font-size: 1.2em;
+}
+
+#app_descrip{
+	margin-top:2em;
+}
+
+/* Use cases */
+#app_use_cases{
+     margin-top: 1.5em;
+}
+
+.app_case_title{
+     font-size: 1.1em;
+     margin-bottom: .5em;
+}
+
+#app_biz_case, #app_user_case{
+     display: inline-block;
+     width: 49%;
+}
+
+.app_class_info{
+     margin: 1em 0 1em 0;
+}
+
+#sign_up_page, #forgot_pass_page{
+     background-image: url("color_line.jpg");
+     height: 45em;
+     color:white;
+}
+#log_in_page{
+     background-image: url("aerial_line.jpg");
+     height: 45em;
+     color:white;
+} 
+
+button, input{
+     color: black;
+}
+
+.form>a, #register>a{
+     background-color:white;
+     border-radius: .5em;
+     padding: .2em 1em .2em 1em;
+}
+
+#sign_up_title, #log_in_title, #forgot_pass_title{
+     font-size:6em;
+     padding-left:.5em;
+}
+
+#path_info{
+	text-align:center;
+        font-size: 3.2em;
+	padding-top: 1em;
+        width: 80%;
+        margin: 0 auto 0em auto;
+}
+
+.path{
+	display:inline-block;
+	width: 40%;
+        margin-top:2em;
+        padding: .5em;
+        font-size: .5em;
+}
+
+.form{
+	margin-top:2em;
+	text-align:center;
+}
+
+/* Icons */
+i{
+     margin-right:1em;
+}
+

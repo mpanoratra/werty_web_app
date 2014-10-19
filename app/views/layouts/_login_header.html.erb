@@ -1,0 +1,19 @@
+<div class="main_header">
+  <% if user_signed_in? %>
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  <% else %>
+    <div id="fake_sign_in_btn"><button>Sign in</button></div>
+    <div id="sign_in hide"><%= form_for(:user, :url => session_path(:user)) do |f| %>
+      <span class="hiddenText hide"><%= f.text_field :email %></span>
+      <span class="hiddenText hide"><%= f.password_field :password %></span>
+      <span class="hiddenText hide"><%= f.check_box :remember_me %></span>
+      <span class="hiddenText hide"><%= f.label :remember_me %></span>
+      <span class="hiddenText hide"><%= f.submit 'Sign in' %></span>
+      <span class="hiddenText hide"><%= link_to "Forgot your password?", new_password_path(:user) %></span></div>
+    <% end %>
+    <div id="register">
+      Not a user?
+      <%= link_to('Register Now!', new_user_registration_path)  %>
+    </div>
+  <% end %>
+</div>
